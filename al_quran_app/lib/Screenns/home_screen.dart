@@ -2,6 +2,7 @@ import 'package:al_quran_app/models/ayah_of_the_day.dart';
 import 'package:al_quran_app/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
@@ -12,7 +13,18 @@ class Home_Screen extends StatefulWidget {
 
 class _Home_ScreenState extends State<Home_Screen> {
   ApiServices _apiServices = ApiServices();
-  AyahOfTheDay? data;
+
+  setData() async {
+    final sharedPreference = await SharedPreferences.getInstance();
+    sharedPreference.getBool('alreadyUsed') ?? true;
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +32,7 @@ class _Home_ScreenState extends State<Home_Screen> {
     var _dates = DateTime.now();
     var format = DateFormat('EEE ,d MMM yyyy');
     var formatted = format.format(_dates);
-    _apiServices.getAyahOfTheDay().then(
-          (value) => data = value,
-        );
+
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -172,7 +182,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(32),
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 3,
                                       spreadRadius: 1,
@@ -220,7 +230,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                               child: Text(
                                                 snapshot.data!.surNumber!
                                                     .toString(),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontSize: 16,
                                                 ),
                                                 textAlign: TextAlign.center,
@@ -234,7 +244,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                               child: Text(
                                                 snapshot.data!.surName!
                                                     .toString(),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontSize: 16,
                                                 ),
                                                 textAlign: TextAlign.center,

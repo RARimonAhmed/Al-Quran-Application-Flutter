@@ -1,4 +1,5 @@
 import 'package:al_quran_app/Constants/constants.dart';
+import 'package:al_quran_app/Screenns/jazscreen.dart';
 import 'package:flutter/material.dart';
 
 import 'Screenns/spalshscreen.dart';
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: const SpalshScreen(),
+      routes: {
+        JazScreen.jazId: (context) => JazScreen(),
+      },
     );
   }
 }

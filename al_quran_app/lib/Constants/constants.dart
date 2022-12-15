@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Constants {
   static const kPrimary = Color(0xff8a51d1);
-  static const MaterialColor kSwatch = const MaterialColor(
+  static const MaterialColor kSwatch = MaterialColor(
     0xff8a51d1,
-    const <int, Color>{
-      50: const Color(0x69aadb),
-      100: const Color(0xffa174da),
-      200: const Color(0xffad85df),
-      300: const Color(0xffb7999e3),
-      400: const Color(0xffc5a8e8),
-      500: const Color(0xffd0b9ed),
-      600: const Color(0xffdccbf1),
-      700: const Color(0xffe8dcf6),
-      800: const Color(0xfff3eefa),
-      900: const Color(0xffffffff),
+    <int, Color>{
+      50: Color(0x0069aadb),
+      100: Color(0xffa174da),
+      200: Color(0xffad85df),
+      // ignore: use_full_hex_values_for_flutter_colors
+      300: Color(0xffb7999e3),
+      400: Color(0xffc5a8e8),
+      500: Color(0xffd0b9ed),
+      600: Color(0xffdccbf1),
+      700: Color(0xffe8dcf6),
+      800: Color(0xfff3eefa),
+      900: Color(0xffffffff),
     },
   );
+  static int? judgeIndex;
+  static int? surahIndex;
 }
