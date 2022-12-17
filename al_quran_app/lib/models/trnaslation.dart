@@ -1,3 +1,16 @@
+class SurahTranslationList {
+  final List<SurahTranslation> translationList;
+  SurahTranslationList({
+    required this.translationList,
+  });
+  factory SurahTranslationList.fromJSON(Map<String, dynamic> map) {
+    Iterable translation = map['result'];
+    List<SurahTranslation> list =
+        translation.map((e) => SurahTranslation.fromJSON(e)).toList();
+    return SurahTranslationList(translationList: list);
+  }
+}
+
 class SurahTranslation {
   String? sura;
   String? aya;

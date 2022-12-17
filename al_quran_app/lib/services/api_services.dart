@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:al_quran_app/models/ayah_of_the_day.dart';
 import 'package:al_quran_app/models/jaz.dart';
+import 'package:al_quran_app/models/trnaslation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
@@ -67,5 +68,12 @@ class ApiServices {
       );
       throw Exception('Failed to load post');
     }
+  }
+
+  Future<SurahTranslationList> getSurahTranslation(int index) async {
+    final Url =
+        'https://quranenc.com/api/v1/translation/sura/english_rwwad/${index}';
+    var response = await http.get(Uri.parse(Url));
+    return SurahTranslationList.fromJSON(jsonDecode(response.body));
   }
 }

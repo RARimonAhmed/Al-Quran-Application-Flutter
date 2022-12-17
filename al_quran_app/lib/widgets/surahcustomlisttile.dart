@@ -3,10 +3,11 @@ import 'package:al_quran_app/models/surah_model.dart';
 import 'package:flutter/material.dart';
 
 // ignore: non_constant_identifier_names
-Widget SurahCustomListTile(
-    {required Surah surah,
-    required BuildContext buildContext,
-    required VoidCallback ontap}) {
+Widget SurahCustomListTile({
+  required Surah surah,
+  required BuildContext buildContext,
+  required VoidCallback ontap,
+}) {
   return GestureDetector(
     onTap: ontap,
     child: Container(

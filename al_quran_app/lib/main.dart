@@ -1,5 +1,6 @@
 import 'package:al_quran_app/Constants/constants.dart';
 import 'package:al_quran_app/Screenns/jazscreen.dart';
+import 'package:al_quran_app/Screenns/surahdetailscreen.dart';
 import 'package:flutter/material.dart';
 
 import 'Screenns/spalshscreen.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       home: const SpalshScreen(),
       routes: {
         JazScreen.jazId: (context) => JazScreen(),
+        SurahDetails.surahId: (context) => const SurahDetails(),
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'package:al_quran_app/Constants/constants.dart';
 import 'package:al_quran_app/Screenns/jazscreen.dart';
+import 'package:al_quran_app/Screenns/surahdetailscreen.dart';
 import 'package:al_quran_app/services/api_services.dart';
 import 'package:al_quran_app/widgets/surahcustomlisttile.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +69,13 @@ class _Quran_ScreenState extends State<Quran_Screen> {
                       itemBuilder: ((context, index) => SurahCustomListTile(
                             surah: surah[index],
                             buildContext: context,
-                            ontap: () {},
+                            ontap: () {
+                              setState(() {
+                                Constants.surahIndex = (index + 1);
+                              });
+                              Navigator.pushNamed(
+                                  context, SurahDetails.surahId);
+                            },
                           )),
                     );
                   }

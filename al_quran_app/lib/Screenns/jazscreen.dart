@@ -8,13 +8,15 @@ class JazScreen extends StatelessWidget {
   static const String jazId = 'Juz_Screen';
   ApiServices apiServices = ApiServices();
 
+  JazScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: FutureBuilder<JuzModel>(
             future: apiServices.getJuz(Constants.judgeIndex!),
-            builder: (context, AsyncSnapshot<JuzModel> snapshot) {
+            builder: (BuildContext context, AsyncSnapshot<JuzModel> snapshot) {
               // switch (snapshot.connectionState) {
               //   case ConnectionState.none:
               //     return Icon(Icons.delete_outline);
@@ -34,7 +36,6 @@ class JazScreen extends StatelessWidget {
                   ),
                 );
               } else if (snapshot.hasData) {
-                print('${snapshot.data!.juzAyahs.length} length');
                 return ListView.builder(
                     itemCount: snapshot.data!.juzAyahs.length,
                     itemBuilder: (context, index) {
