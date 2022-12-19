@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:al_quran_app/models/ayah_of_the_day.dart';
 import 'package:al_quran_app/models/jaz.dart';
+import 'package:al_quran_app/models/qari.dart';
 import 'package:al_quran_app/models/trnaslation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -33,7 +34,6 @@ class ApiServices {
     Response response = await http.get(Uri.parse(endpointUrl));
 
     if (response.statusCode == 200) {
-      print('Surah List');
       Map<String, dynamic> json = jsonDecode(response.body);
       var suraJSONArr = json["data"];
       for (var singleSura in suraJSONArr) {
@@ -48,7 +48,6 @@ class ApiServices {
           surahList.add(surah);
         }
       }
-      print(surahList);
       return surahList;
     } else {
       throw 'Can\'t get a surah';
@@ -59,7 +58,6 @@ class ApiServices {
     String Url = 'http://api.alquran.cloud/v1/juz/${index}/quran-uthmani';
     final response = await http.get(Uri.parse(Url));
     if (response.statusCode == 200) {
-      print('from getJuzz');
       return JuzModel.fromJSON(json.decode(response.body));
     } else {
       print('Failed to load');
@@ -70,10 +68,31 @@ class ApiServices {
     }
   }
 
-  Future<SurahTranslationList> getSurahTranslation(int index) async {
-    final Url =
-        'https://quranenc.com/api/v1/translation/sura/english_rwwad/${index}';
+  Future<SurahTranslationList> getSurahTranslation(
+      int index, int translationIndex) async {
+    String lan = "";
+    if (translationIndex == 0) {
+      lan = "english_saheeh";
+    } else if (translationIndex == 1) {
+      lan = "urdu_junagarhi";
+    } else if (translationIndex == 2) {
+      lan = "hindi_omari";
+    }
+    final Url = 'https://quranenc.com/api/v1/translation/sura/${lan}/${index}';
     var response = await http.get(Uri.parse(Url));
     return SurahTranslationList.fromJSON(jsonDecode(response.body));
+  }
+
+  List<Qari> qariList = [];
+  Future<List<Qari>> getQariList() async {
+    const url = "https://quranicaudio.com/api/qaris";
+    final res = await http.get(Uri.parse(url));
+    jsonDecode(res.body).forEach((element) {
+      if (qariList.length < 20) {
+        qariList.add(Qari.fromJSON(element));
+      }
+    });
+    qariList.sort((a, b) => a.name!.compareTo(b.name!));
+    return qariList;
   }
 }

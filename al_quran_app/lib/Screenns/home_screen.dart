@@ -164,99 +164,104 @@ class _Home_ScreenState extends State<Home_Screen> {
                       FutureBuilder<AyahOfTheDay>(
                         future: _apiServices.getAyahOfTheDay(),
                         builder: ((context, snapshot) {
-                          switch (snapshot.connectionState) {
-                            case ConnectionState.none:
-                              return const Icon(Icons.sync_problem);
-                            case ConnectionState.waiting:
-                              return const Icon(Icons.running_with_errors);
-                            case ConnectionState.active:
-                              return const CircularProgressIndicator(
-                                color: Colors.red,
-                              );
-                            case ConnectionState.done:
-                              return Container(
-                                // color: Colors.white,
-                                margin: const EdgeInsetsDirectional.all(16),
-                                padding: const EdgeInsetsDirectional.all(20),
+                          if (snapshot.hasError) {
+                            return const Center(
+                                child: Text('Internet is not connected.'));
+                          } else {
+                            switch (snapshot.connectionState) {
+                              case ConnectionState.none:
+                                return const Icon(Icons.sync_problem);
+                              case ConnectionState.waiting:
+                                return const Icon(Icons.running_with_errors);
+                              case ConnectionState.active:
+                                return const CircularProgressIndicator(
+                                  color: Colors.red,
+                                );
+                              case ConnectionState.done:
+                                return Container(
+                                  // color: Colors.white,
+                                  margin: const EdgeInsetsDirectional.all(16),
+                                  padding: const EdgeInsetsDirectional.all(20),
 
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(32),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 3,
-                                      spreadRadius: 1,
-                                      offset: Offset(0, 1),
-                                    ),
-                                  ],
-                                ),
-                                child: Column(
-                                  children: [
-                                    const Text(
-                                      'Quran Ayah Of The Day',
-                                      style: TextStyle(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(32),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 3,
+                                        spreadRadius: 1,
+                                        offset: Offset(0, 1),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      const Text(
+                                        'Quran Ayah Of The Day',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      const Divider(
+                                        thickness: 0.5,
                                         color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
                                       ),
-                                    ),
-                                    const Divider(
-                                      thickness: 0.5,
-                                      color: Colors.black,
-                                    ),
-                                    Text(
-                                      snapshot.data!.arText!,
-                                      style: const TextStyle(
-                                        color: Colors.black54,
-                                        fontSize: 18,
+                                      Text(
+                                        snapshot.data!.arText!,
+                                        style: const TextStyle(
+                                          color: Colors.black54,
+                                          fontSize: 18,
+                                        ),
+                                        textAlign: TextAlign.center,
                                       ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    Text(
-                                      snapshot.data!.enTrans!,
-                                      style: const TextStyle(
-                                        color: Colors.black54,
-                                        fontSize: 18,
+                                      Text(
+                                        snapshot.data!.enTrans!,
+                                        style: const TextStyle(
+                                          color: Colors.black54,
+                                          fontSize: 18,
+                                        ),
+                                        textAlign: TextAlign.center,
                                       ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    RichText(
-                                      text: TextSpan(
-                                        children: <InlineSpan>[
-                                          WidgetSpan(
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                snapshot.data!.surNumber!
-                                                    .toString(),
-                                                style: const TextStyle(
-                                                  fontSize: 16,
+                                      RichText(
+                                        text: TextSpan(
+                                          children: <InlineSpan>[
+                                            WidgetSpan(
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Text(
+                                                  snapshot.data!.surNumber!
+                                                      .toString(),
+                                                  style: const TextStyle(
+                                                    fontSize: 16,
+                                                  ),
+                                                  textAlign: TextAlign.center,
                                                 ),
-                                                textAlign: TextAlign.center,
                                               ),
                                             ),
-                                          ),
-                                          WidgetSpan(
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                snapshot.data!.surName!
-                                                    .toString(),
-                                                style: const TextStyle(
-                                                  fontSize: 16,
+                                            WidgetSpan(
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Text(
+                                                  snapshot.data!.surName!
+                                                      .toString(),
+                                                  style: const TextStyle(
+                                                    fontSize: 16,
+                                                  ),
+                                                  textAlign: TextAlign.center,
                                                 ),
-                                                textAlign: TextAlign.center,
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              );
+                                    ],
+                                  ),
+                                );
+                            }
                           }
                         }),
                       )
