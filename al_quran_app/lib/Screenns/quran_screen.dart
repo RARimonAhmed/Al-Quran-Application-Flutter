@@ -2,6 +2,7 @@ import 'package:al_quran_app/Constants/constants.dart';
 import 'package:al_quran_app/Screenns/jazscreen.dart';
 import 'package:al_quran_app/Screenns/surahdetailscreen.dart';
 import 'package:al_quran_app/services/api_services.dart';
+import 'package:al_quran_app/widgets/future_builder.dart';
 import 'package:al_quran_app/widgets/surahcustomlisttile.dart';
 import 'package:flutter/material.dart';
 
@@ -86,9 +87,7 @@ class _Quran_ScreenState extends State<Quran_Screen> {
                   );
                 },
               ),
-              const Divider(
-                color: Colors.amber,
-              ),
+              SajdaTile(),
               GestureDetector(
                 child: Container(
                   padding: const EdgeInsets.all(8.0),

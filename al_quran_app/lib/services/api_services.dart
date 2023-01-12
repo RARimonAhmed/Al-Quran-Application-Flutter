@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
+import '../models/sajda_model.dart';
 import '../models/surah_model.dart';
 
 class ApiServices {
@@ -26,7 +27,7 @@ class ApiServices {
   }
 
   random(min, max) {
-    var rn = new Random();
+    var rn = Random();
     return min + rn.nextInt(max - min);
   }
 
@@ -51,6 +52,17 @@ class ApiServices {
       return surahList;
     } else {
       throw 'Can\'t get a surah';
+    }
+  }
+
+  Future<SajdaModel> getSajda() async {
+    String url = 'https://api.alquran.cloud/v1/sajda/quran-uthmani';
+    Response response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      return SajdaModel.fromJson(json.decode(response.body));
+    } else {
+      throw Exception('Get Exeption');
+      //  Center(child: Container(child: Text()),);
     }
   }
 
