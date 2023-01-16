@@ -48,7 +48,7 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => Audio_Screen(
+                                  builder: ((context) => AudioScreen(
                                         // qari: widget.qari,
                                         index: index + 1,
                                         list: surah,
@@ -139,7 +139,7 @@ Widget AudioTile(
                   height: 3,
                 ),
                 Text(
-                  "Total ayath : ${totalayah}",
+                  "Total ayath : $totalayah",
                   style: const TextStyle(
                     color: Colors.black54,
                     fontSize: 16,

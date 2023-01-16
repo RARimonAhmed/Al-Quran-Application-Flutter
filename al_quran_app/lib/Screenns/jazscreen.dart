@@ -4,11 +4,17 @@ import 'package:al_quran_app/services/api_services.dart';
 import 'package:al_quran_app/widgets/juzzcustomtile.dart';
 import 'package:flutter/material.dart';
 
-class JazScreen extends StatelessWidget {
+class JazScreen extends StatefulWidget {
   static const String jazId = 'Juz_Screen';
-  ApiServices apiServices = ApiServices();
 
-  JazScreen({super.key});
+  const JazScreen({super.key});
+
+  @override
+  State<JazScreen> createState() => _JazScreenState();
+}
+
+class _JazScreenState extends State<JazScreen> {
+  ApiServices apiServices = ApiServices();
 
   @override
   Widget build(BuildContext context) {

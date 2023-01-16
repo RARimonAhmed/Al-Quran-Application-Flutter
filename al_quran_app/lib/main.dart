@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const SpalshScreen(),
       routes: {
-        JazScreen.jazId: (context) => JazScreen(),
+        JazScreen.jazId: (context) => const JazScreen(),
         SurahDetails.surahId: (context) => const SurahDetails(),
       },
     );

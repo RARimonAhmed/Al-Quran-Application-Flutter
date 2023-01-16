@@ -1,14 +1,11 @@
 import 'package:al_quran_app/models/sajda_model.dart';
 import 'package:flutter/material.dart';
-
 import '../Constants/constants.dart';
 import '../Screenns/surahdetailscreen.dart';
-import '../models/surah_model.dart';
 import '../services/api_services.dart';
-import 'surahcustomlisttile.dart';
 
 class SajdaTile extends StatefulWidget {
-  SajdaTile({
+  const SajdaTile({
     super.key,
   });
 

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class TranslationTile extends StatelessWidget {
   final int index;
   final SurahTranslation surahTranslation;
-  TranslationTile(
+  const TranslationTile(
       {super.key, required this.index, required this.surahTranslation});
 
   @override
@@ -17,8 +17,8 @@ class TranslationTile extends StatelessWidget {
           color: Colors.white,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(8),
-          boxShadow: [
-            const BoxShadow(
+          boxShadow: const [
+            BoxShadow(
               blurRadius: 1,
             )
           ],

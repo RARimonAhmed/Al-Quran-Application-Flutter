@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 
 import '../models/surah_model.dart';
 
-class Quran_Screen extends StatefulWidget {
-  const Quran_Screen({super.key});
+class QuranScreen extends StatefulWidget {
+  const QuranScreen({super.key});
 
   @override
-  State<Quran_Screen> createState() => _Quran_ScreenState();
+  State<QuranScreen> createState() => _QuranScreenState();
 }
 
-class _Quran_ScreenState extends State<Quran_Screen> {
+class _QuranScreenState extends State<QuranScreen> {
   ApiServices apiServices = ApiServices();
   @override
   Widget build(BuildContext context) {
@@ -87,7 +87,7 @@ class _Quran_ScreenState extends State<Quran_Screen> {
                   );
                 },
               ),
-              SajdaTile(),
+              const SajdaTile(),
               GestureDetector(
                 child: Container(
                   padding: const EdgeInsets.all(8.0),

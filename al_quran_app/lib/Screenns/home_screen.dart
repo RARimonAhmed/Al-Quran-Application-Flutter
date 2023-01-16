@@ -1,17 +1,19 @@
+// ignore_for_file: prefer_final_fields, no_leading_underscores_for_local_identifiers
+
 import 'package:al_quran_app/models/ayah_of_the_day.dart';
 import 'package:al_quran_app/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Home_Screen extends StatefulWidget {
-  const Home_Screen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Home_Screen> createState() => _Home_ScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _Home_ScreenState extends State<Home_Screen> {
+class _HomeScreenState extends State<HomeScreen> {
   ApiServices _apiServices = ApiServices();
 
   setData() async {
@@ -21,7 +23,6 @@ class _Home_ScreenState extends State<Home_Screen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setData();
   }
@@ -86,7 +87,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              _dates.day.toString() + ' - ',
+                              '${_dates.day} - ',
                               style: const TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,
@@ -99,7 +100,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              _dates.month.toString() + ' - ',
+                              '${_dates.month} - ',
                               style: const TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,
@@ -112,7 +113,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              _dates.year.toString() + ' eng',
+                              '${_dates.year} eng',
                               style: const TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,

@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:convert';
 import 'dart:math';
 
@@ -67,12 +69,11 @@ class ApiServices {
   }
 
   Future<JuzModel> getJuz(int index) async {
-    String Url = 'http://api.alquran.cloud/v1/juz/${index}/quran-uthmani';
+    String Url = 'http://api.alquran.cloud/v1/juz/$index/quran-uthmani';
     final response = await http.get(Uri.parse(Url));
     if (response.statusCode == 200) {
       return JuzModel.fromJSON(json.decode(response.body));
     } else {
-      print('Failed to load');
       const CircularProgressIndicator(
         color: Colors.red,
       );
@@ -90,7 +91,7 @@ class ApiServices {
     } else if (translationIndex == 2) {
       lan = "hindi_omari";
     }
-    final Url = 'https://quranenc.com/api/v1/translation/sura/${lan}/${index}';
+    final Url = 'https://quranenc.com/api/v1/translation/sura/$lan/$index';
     var response = await http.get(Uri.parse(Url));
     return SurahTranslationList.fromJSON(jsonDecode(response.body));
   }

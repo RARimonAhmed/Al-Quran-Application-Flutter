@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Prayer_Screen extends StatefulWidget {
-  const Prayer_Screen({super.key});
+class PrayerScreen extends StatefulWidget {
+  const PrayerScreen({super.key});
 
   @override
-  State<Prayer_Screen> createState() => _Prayer_ScreenState();
+  State<PrayerScreen> createState() => _PrayerScreenState();
 }
 
-class _Prayer_ScreenState extends State<Prayer_Screen> {
+class _PrayerScreenState extends State<PrayerScreen> {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
