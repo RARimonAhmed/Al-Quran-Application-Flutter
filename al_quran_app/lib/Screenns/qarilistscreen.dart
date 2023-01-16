@@ -70,14 +70,11 @@ class _QariListScreenState extends State<QariListScreen> {
                     builder: (BuildContext context,
                         AsyncSnapshot<List<Qari>> snapshot) {
                       if (snapshot.hasError) {
-                        print(snapshot.hasData);
-                        print(snapshot.error);
                         return const Center(
                           child: Text('Internet is not connection'),
                         );
                       }
                       if (snapshot.connectionState == ConnectionState.waiting) {
-                        print(snapshot.hasData);
                         return const Center(
                           child: CircularProgressIndicator(
                             color: Colors.amber,
@@ -87,7 +84,6 @@ class _QariListScreenState extends State<QariListScreen> {
                       return ListView.builder(
                         itemCount: snapshot.data!.length,
                         itemBuilder: ((context, index) {
-                          print(snapshot.hasData);
                           return QariCustomTile(
                               qari: snapshot.data![index],
                               ontap: (() {

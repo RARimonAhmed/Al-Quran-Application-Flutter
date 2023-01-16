@@ -31,7 +31,7 @@ class _SajdaTileState extends State<SajdaTile> {
                   onTap: () {
                     setState(() {
                       Constants.surahIndex =
-                          snapshot.data?.data!.ayahs![index + 1].numberInSurah;
+                          snapshot.data?.data!.ayahs![index].numberInSurah;
                     });
                     Navigator.pushNamed(context, SurahDetails.surahId);
                   },

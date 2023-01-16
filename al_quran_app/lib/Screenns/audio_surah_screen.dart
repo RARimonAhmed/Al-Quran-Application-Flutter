@@ -58,12 +58,12 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
                 return Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const Icon(
+                    children: const [
+                      Icon(
                         Icons.error_rounded,
                         color: Colors.red,
                       ),
-                      const Text(
+                      Text(
                           'Something went wrong!.\nMake sure your net connection.'),
                     ],
                   ),
@@ -75,6 +75,7 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
   }
 }
 
+// ignore: non_constant_identifier_names
 Widget AudioTile(
     {required String? surahName,
     required totalayah,
