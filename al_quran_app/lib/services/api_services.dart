@@ -10,11 +10,16 @@ import 'package:al_quran_app/models/trnaslation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+import 'package:intl/intl.dart';
 
+import '../models/audio_file_model.dart';
+import '../models/prayer_model.dart';
 import '../models/sajda_model.dart';
 import '../models/surah_model.dart';
 
 class ApiServices {
+  var year = DateFormat.y().format(DateTime.now());
+  var month = DateFormat.M().format(DateTime.now());
   final endpointUrl = 'http://api.alquran.cloud/v1/surah';
   List<Surah> surahList = [];
   Future<AyahOfTheDay> getAyahOfTheDay() async {
@@ -64,7 +69,6 @@ class ApiServices {
       return SajdaModel.fromJson(json.decode(response.body));
     } else {
       throw Exception('Get Exeption');
-      //  Center(child: Container(child: Text()),);
     }
   }
 
@@ -96,16 +100,47 @@ class ApiServices {
     return SurahTranslationList.fromJSON(jsonDecode(response.body));
   }
 
-  List<Qari> qariList = [];
-  Future<List<Qari>> getQariList() async {
+  List<QariModel> qariList = [];
+  Future<List<QariModel>> getQariList() async {
+    // For audio link
+    // const audioUrl = "https://quranicaudio.com/api/audio_files";
+    // const surahsoUrl = "https://quranicaudio.com/api/surahs";
+    // const sectionsUrl = "https://quranicaudio.com/api/sections";
+
     const url = "https://quranicaudio.com/api/qaris";
     final res = await http.get(Uri.parse(url));
     jsonDecode(res.body).forEach((element) {
-      if (qariList.length < 20) {
-        qariList.add(Qari.fromJSON(element));
+      if (qariList.length < 155) {
+        qariList.add(QariModel.fromJSON(element));
       }
     });
     qariList.sort((a, b) => a.name!.compareTo(b.name!));
     return qariList;
+  }
+
+  //For audio playing
+  List<AudioFileModel> audioFileList = [];
+  Future<List<AudioFileModel>> getAudioiList() async {
+    const url = "https://quranicaudio.com/api/audio_files";
+    final res = await http.get(Uri.parse(url));
+    jsonDecode(res.body).forEach((element) {
+      if (res.statusCode == 200) {
+        audioFileList.add(AudioFileModel.fromJson(element));
+      }
+    });
+    qariList.sort((a, b) => a.name!.compareTo(b.name!));
+    return audioFileList;
+  }
+
+  //Prayer Api
+  Future<PrayerModel> getPrayerTime() async {
+    String prayerUrl =
+        'http://api.aladhan.com/v1/calendarByAddress?address=Dhaka&method=2&month=$month&year=$year';
+    final response = await http.get(Uri.parse(prayerUrl));
+    if (response.statusCode == 200) {
+      return PrayerModel.fromJson(jsonDecode(response.body));
+    } else {
+      throw Exception();
+    }
   }
 }

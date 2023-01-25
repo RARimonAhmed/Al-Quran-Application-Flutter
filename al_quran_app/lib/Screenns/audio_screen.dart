@@ -55,16 +55,19 @@
 //   }
 // }
 
+import 'package:al_quran_app/models/qari.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../models/surah_model.dart';
 
 class AudioScreen extends StatefulWidget {
+  final QariModel qari;
   final int index;
   final List<Surah>? list;
 
-  const AudioScreen({super.key, required this.index, this.list});
+  const AudioScreen(
+      {super.key, required this.index, this.list, required this.qari});
   @override
   // ignore: library_private_types_in_public_api
   _AudioScreenState createState() => _AudioScreenState();
@@ -80,6 +83,7 @@ class _AudioScreenState extends State<AudioScreen> {
 
     _audioPlayer
         .setAudioSource(ConcatenatingAudioSource(children: [
+      AudioSource.uri(Uri.parse(widget.qari.path.toString())),
       AudioSource.uri(Uri.parse(
           "https://archive.org/download/IGM-V7/IGM%20-%20Vol.%207/25%20Diablo%20-%20Tristram%20%28Blizzard%29.mp3")),
       AudioSource.uri(Uri.parse(

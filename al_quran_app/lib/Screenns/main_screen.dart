@@ -1,9 +1,9 @@
 import 'package:al_quran_app/Constants/constants.dart';
-import 'package:al_quran_app/Screenns/audio_screen.dart';
 import 'package:al_quran_app/Screenns/home_screen.dart';
 import 'package:al_quran_app/Screenns/prayer_screen.dart';
 import 'package:al_quran_app/Screenns/qarilistscreen.dart';
 import 'package:al_quran_app/Screenns/quran_screen.dart';
+
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -28,11 +28,6 @@ class _MainScreenState extends State<MainScreen> {
     const QuranScreen(),
     const QariListScreen(),
     const PrayerScreen(),
-    const AudioScreen(
-      index: 0,
-      list: [],
-      // qari: ,
-    ),
   ];
   @override
   Widget build(BuildContext context) {

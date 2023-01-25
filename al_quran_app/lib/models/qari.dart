@@ -1,14 +1,14 @@
-class Qari {
+class QariModel {
   String? name;
   String? path;
   String? format;
-  Qari({
+  QariModel({
     this.name,
     this.path,
     this.format,
   });
-  factory Qari.fromJSON(Map<String, dynamic> json) {
-    return Qari(
+  factory QariModel.fromJSON(Map<String, dynamic> json) {
+    return QariModel(
       name: json['name'],
       path: json['relative_path'],
       format: json['file_formats'],

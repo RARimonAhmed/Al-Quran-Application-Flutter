@@ -22,13 +22,13 @@ class _SajdaTileState extends State<SajdaTile> {
       builder: (BuildContext context, AsyncSnapshot<SajdaModel> snapshot) {
         if (snapshot.hasData) {
           return ListView.builder(
-              itemCount: 15,
+              itemCount: snapshot.data!.data!.ayahs!.length,
               itemBuilder: ((context, index) {
                 return GestureDetector(
                   onTap: () {
                     setState(() {
                       Constants.surahIndex =
-                          snapshot.data?.data!.ayahs![index].numberInSurah;
+                          snapshot.data?.data!.ayahs![index].surah!.number;
                     });
                     Navigator.pushNamed(context, SurahDetails.surahId);
                   },

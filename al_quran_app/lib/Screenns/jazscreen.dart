@@ -23,17 +23,6 @@ class _JazScreenState extends State<JazScreen> {
         body: FutureBuilder<JuzModel>(
             future: apiServices.getJuz(Constants.judgeIndex!),
             builder: (BuildContext context, AsyncSnapshot<JuzModel> snapshot) {
-              // switch (snapshot.connectionState) {
-              //   case ConnectionState.none:
-              //     return Icon(Icons.delete_outline);
-
-              //   case ConnectionState.waiting:
-              //     return Icon(Icons.circle_notifications);
-              //   case ConnectionState.active:
-              //     return CircularProgressIndicator(
-              //       color: Colors.blueAccent,
-              //     );
-              //   case ConnectionState.done:
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
                   child: CircularProgressIndicator(

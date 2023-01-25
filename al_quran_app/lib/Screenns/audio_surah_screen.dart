@@ -8,7 +8,7 @@ import 'audio_screen.dart';
 
 class AudioSurahScreen extends StatefulWidget {
   const AudioSurahScreen({super.key, required this.qari});
-  final Qari qari;
+  final QariModel qari;
 
   @override
   State<AudioSurahScreen> createState() => _AudioSurahScreenState();
@@ -49,7 +49,7 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: ((context) => AudioScreen(
-                                        // qari: widget.qari,
+                                        qari: widget.qari,
                                         index: index + 1,
                                         list: surah,
                                       ))));

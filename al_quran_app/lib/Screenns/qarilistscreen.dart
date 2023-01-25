@@ -68,7 +68,7 @@ class _QariListScreenState extends State<QariListScreen> {
                 child: FutureBuilder(
                     future: apiServices.getQariList(),
                     builder: (BuildContext context,
-                        AsyncSnapshot<List<Qari>> snapshot) {
+                        AsyncSnapshot<List<QariModel>> snapshot) {
                       if (snapshot.hasError) {
                         return const Center(
                           child: Text('Internet is not connection'),

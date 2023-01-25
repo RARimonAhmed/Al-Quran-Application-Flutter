@@ -2,7 +2,7 @@ import 'package:al_quran_app/models/qari.dart';
 import 'package:flutter/material.dart';
 
 class QariCustomTile extends StatefulWidget {
-  final Qari qari;
+  final QariModel qari;
   final VoidCallback ontap;
   const QariCustomTile({super.key, required this.qari, required this.ontap});
 
