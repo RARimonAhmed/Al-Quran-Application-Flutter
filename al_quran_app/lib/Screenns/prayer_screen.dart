@@ -1,6 +1,7 @@
 import 'package:al_quran_app/Constants/constants.dart';
 import 'package:al_quran_app/controllers/prayer_screen_controller.dart';
 import 'package:al_quran_app/services/api_services.dart';
+import 'package:al_quran_app/widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -33,79 +34,152 @@ class _PrayerScreenState extends State<PrayerScreen> {
                   itemCount: 1,
                   itemBuilder: ((context, index) {
                     return Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        ListTile(
-                          tileColor: Colors.blue,
-                          leading: Text(
-                            snapshot.data!.data![index].timings!.fajr
-                                .toString(),
-                            style: const TextStyle(
-                              fontSize: 20,
-                              color: Constants.kPrimary,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          title: const Center(
-                            child: Text(
-                              "Fajr",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.redAccent,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ),
-                          trailing: Example(
-                              hour: (int.parse(snapshot
-                                      .data!.data![index].timings!.fajr
-                                      .toString()
-                                      .substring(0, 2))) -
-                                  (int.parse(
-                                      DateFormat.H().format(DateTime.now()))),
-                              minute: int.parse(snapshot
-                                      .data!.data![index].timings!.fajr
-                                      .toString()
-                                      .substring(3, 5)) -
-                                  (int.parse(
-                                      DateFormat.H().format(DateTime.now()))),
-                              second: 0),
+                        CustomListTile(
+                          tilecolors: Colors.lightBlue,
+                          wakth: 'Fajr',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.fajr
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.fajr
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.fajr
+                              .toString(),
                         ),
-                        ListTile(
-                          tileColor: Colors.blue,
-                          leading: Text(
-                            snapshot.data!.data![index].timings!.asr.toString(),
-                            style: const TextStyle(
-                              fontSize: 20,
-                              color: Constants.kPrimary,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          title: const Center(
-                            child: Text(
-                              "Asr",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.redAccent,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ),
-                          trailing: Example(
-                              hour: (int.parse(snapshot
-                                  .data!.data![index].timings!.asr
-                                  .toString()
-                                  .substring(0, 2))),
-                              //     -
-                              // (int.parse(
-                              //     DateFormat.H().format(DateTime.now()))),
-                              minute: int.parse(snapshot
-                                  .data!.data![index].timings!.asr
-                                  .toString()
-                                  .substring(3, 5)),
-                              //      -
-                              // (int.parse(
-                              //     DateFormat.H().format(DateTime.now()))),
-                              second: 0),
+                        CustomListTile(
+                          tilecolors: Colors.indigo,
+                          wakth: 'Sunrise',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.sunrise
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.sunrise
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.sunrise
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.lightGreen,
+                          wakth: 'Dhuhr',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.dhuhr
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.dhuhr
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.dhuhr
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.orangeAccent,
+                          wakth: 'Asr',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.asr
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.asr
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.asr
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.blue,
+                          wakth: 'Sunset',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.sunset
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.sunset
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.sunset
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.amber,
+                          wakth: 'Magrib',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.maghrib
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.maghrib
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.maghrib
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.purple,
+                          wakth: 'Isha',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.isha
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.isha
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.isha
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.teal,
+                          wakth: 'Imsak',
+                          firstHour: (int.parse(snapshot
+                              .data!.data![index].timings!.imsak
+                              .toString()
+                              .substring(0, 2))),
+                          secondHour: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          firstMinute: int.parse(snapshot
+                              .data!.data![index].timings!.imsak
+                              .toString()
+                              .substring(3, 5)),
+                          secondMinute: (int.parse(
+                              DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.imsak
+                              .toString(),
                         ),
                       ],
                     );
