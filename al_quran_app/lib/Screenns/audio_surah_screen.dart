@@ -48,11 +48,7 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => AudioScreen(
-                                        qari: widget.qari,
-                                        index: index + 1,
-                                        list: surah,
-                                      ))));
+                                  builder: ((context) => const MusicPlayer())));
                         })));
               } else {
                 return Center(

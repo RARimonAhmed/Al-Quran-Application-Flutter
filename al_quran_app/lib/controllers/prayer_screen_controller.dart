@@ -1,32 +1,55 @@
+import 'package:al_quran_app/Screenns/audio_screen.dart';
+import 'package:al_quran_app/controllers/player_controllers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
+import 'package:rxdart/rxdart.dart';
 
-class Example extends StatelessWidget {
+import '../Screenns/azan_player.dart';
+
+class PrayerController extends StatefulWidget {
   // Duration durations;
   final int hour, minute, second;
-  const Example(
+  const PrayerController(
       {super.key,
       required this.hour,
       required this.minute,
       required this.second});
 
   @override
+  State<PrayerController> createState() => _PrayerControllerState();
+}
+
+class _PrayerControllerState extends State<PrayerController> {
+  // final audiPlayer = AudioPlayer();
+  // bool isPlaying = false;
+
+  // @override
+  // void dispose() {
+  //   audiPlayer.dispose();
+  //   super.dispose();
+  // }
+
+  @override
   Widget build(BuildContext context) {
-    AudioPlayer audioPlayer = AudioPlayer()..setAsset('images/ajan.mp3');
     return TimerCountdown(
       spacerWidth: 0,
       format: CountDownTimerFormat.daysHoursMinutesSeconds,
       endTime: DateTime.now().subtract(
         Duration(
           days: 0,
-          hours: hour,
-          minutes: minute,
-          seconds: second,
+          hours: widget.hour,
+          minutes: widget.minute,
+          seconds: widget.second,
         ),
       ),
-      onEnd: () {
-        audioPlayer.play();
+      onEnd: () async {
+        Future.delayed(
+          const Duration(seconds: 2),
+        );
+        Navigator.push(context,
+            MaterialPageRoute(builder: ((context) => const MusicPlayer())));
         print("Timer finished");
       },
     );

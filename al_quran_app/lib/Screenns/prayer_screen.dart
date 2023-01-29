@@ -1,4 +1,5 @@
 import 'package:al_quran_app/Constants/constants.dart';
+import 'package:al_quran_app/Screenns/audio_screen.dart';
 import 'package:al_quran_app/controllers/prayer_screen_controller.dart';
 import 'package:al_quran_app/services/api_services.dart';
 import 'package:al_quran_app/widgets/custom_list_tile.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../models/prayer_model.dart';
+import 'azan_player.dart';
 
 class PrayerScreen extends StatefulWidget {
   const PrayerScreen({super.key});
@@ -178,6 +180,16 @@ class _PrayerScreenState extends State<PrayerScreen> {
                               .substring(3, 5)),
                           secondMinute: (int.parse(
                               DateFormat.H().format(DateTime.now()))),
+                          timeText: snapshot.data!.data![index].timings!.imsak
+                              .toString(),
+                        ),
+                        CustomListTile(
+                          tilecolors: Colors.teal,
+                          wakth: 'new',
+                          firstHour: 5,
+                          secondHour: 4,
+                          firstMinute: 5,
+                          secondMinute: 3,
                           timeText: snapshot.data!.data![index].timings!.imsak
                               .toString(),
                         ),

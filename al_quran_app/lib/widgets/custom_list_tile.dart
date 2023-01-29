@@ -23,31 +23,37 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ApiServices apiServices = ApiServices();
-    return ListTile(
-      tileColor: tilecolors,
-      leading: Text(
-        timeText,
-        style: const TextStyle(
-          fontSize: 20,
-          color: Constants.kPrimary,
-          fontWeight: FontWeight.w700,
-        ),
-      ),
-      title: Center(
-        child: Text(
-          wakth,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.redAccent,
-            fontWeight: FontWeight.w700,
+    return Column(
+      children: [
+        ListTile(
+          tileColor: tilecolors,
+          leading: Text(
+            textAlign: TextAlign.center,
+            timeText,
+            style: const TextStyle(
+              fontSize: 20,
+              color: Constants.kPrimary,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          title: Text(
+            wakth,
+            style: const TextStyle(
+              fontSize: 20,
+              color: Colors.redAccent,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          trailing: PrayerController(
+            hour: firstHour - secondHour,
+            minute: firstMinute - secondMinute,
+            second: 0,
           ),
         ),
-      ),
-      trailing: Example(
-        hour: firstHour - secondHour,
-        minute: firstMinute - secondMinute,
-        second: 0,
-      ),
+        const SizedBox(
+          height: 5,
+        ),
+      ],
     );
   }
 }
