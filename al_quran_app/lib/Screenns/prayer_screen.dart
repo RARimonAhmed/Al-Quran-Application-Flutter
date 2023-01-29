@@ -1,13 +1,9 @@
-import 'package:al_quran_app/Constants/constants.dart';
-import 'package:al_quran_app/Screenns/audio_screen.dart';
-import 'package:al_quran_app/controllers/prayer_screen_controller.dart';
 import 'package:al_quran_app/services/api_services.dart';
 import 'package:al_quran_app/widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../models/prayer_model.dart';
-import 'azan_player.dart';
 
 class PrayerScreen extends StatefulWidget {
   const PrayerScreen({super.key});
@@ -21,9 +17,6 @@ class _PrayerScreenState extends State<PrayerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var _dates = DateTime.now();
-    var format = DateFormat.jm().format(DateTime.now());
-    var formatted = format;
     return SafeArea(
       child: Scaffold(
         body: FutureBuilder(

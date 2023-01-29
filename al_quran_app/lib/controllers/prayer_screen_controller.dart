@@ -1,12 +1,6 @@
 import 'package:al_quran_app/Screenns/audio_screen.dart';
-import 'package:al_quran_app/controllers/player_controllers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
-import 'package:just_audio/just_audio.dart';
-import 'package:just_audio_background/just_audio_background.dart';
-import 'package:rxdart/rxdart.dart';
-
-import '../Screenns/azan_player.dart';
 
 class PrayerController extends StatefulWidget {
   // Duration durations;
@@ -50,7 +44,6 @@ class _PrayerControllerState extends State<PrayerController> {
         );
         Navigator.push(context,
             MaterialPageRoute(builder: ((context) => const MusicPlayer())));
-        print("Timer finished");
       },
     );
   }

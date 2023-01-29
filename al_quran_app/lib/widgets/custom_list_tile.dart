@@ -1,10 +1,7 @@
-import 'package:al_quran_app/services/api_services.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 import '../Constants/constants.dart';
 import '../controllers/prayer_screen_controller.dart';
-import '../models/prayer_model.dart';
 
 class CustomListTile extends StatelessWidget {
   final Color tilecolors;
@@ -22,7 +19,6 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ApiServices apiServices = ApiServices();
     return Column(
       children: [
         ListTile(
