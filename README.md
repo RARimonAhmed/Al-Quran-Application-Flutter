@@ -14,31 +14,31 @@ COVID-19 Tracker App provides real-time statistics and insights about COVID-19 c
 
 ### App Screenshots:
 
-## Splash Screen
+## Surah Details Screen
 <img src="https://drive.google.com/uc?export=view&id=1CI6HIH3RjVtF4-A-Tns5KbHGrwx2cKHq" alt="App Screenshot 1" width="200" height="400">
 
-## Home Page
+## Home Screen
 <img src="https://drive.google.com/uc?export=view&id=1Jf5rfjPCHv2JagRUVTHUalftK1BuhXIw" alt="App Screenshot 2" width="200" height="400">
 
-## Search Screen
+## Onboarding screen-3
 <img src="https://drive.google.com/uc?export=view&id=1xH_vtUBm32mHAVaSoMtXrgg4IPnPj_X3" alt="App Screenshot 3" width="200" height="400">
 
-## Country List Screen
+## Onboarding screen-2
 <img src="https://drive.google.com/uc?export=view&id=1YEzRD_FnZo-xO5sY_JaY7zVxjoHXcblG" alt="App Screenshot 4" width="200" height="400">
 
-## Countries People Affected Details Screen
+## Onboarding screen-1
 <img src="https://drive.google.com/uc?export=view&id=1mk-kr63tmeTiql-rb3CYbujxDG2_LZ7a" alt="App Screenshot 5" width="200" height="400">
 
-## Shimmer Loading Screen
+## Splash Screen
 <img src="https://drive.google.com/uc?export=view&id=1M_XcuYgBkHwJw1Herbb2sRI7zDXQ-PsR" alt="App Screenshot 6" width="200" height="400">
 
 ## Graph Representation Screen
 <img src="https://drive.google.com/uc?export=view&id=19d7HF2osNnGmXu8vOyZVXWzt-bN5nh1R" alt="App Screenshot 7" width="200" height="400">
 
-## COVID-19 News Screen
+## Qari List and Search Screen
 <img src="https://drive.google.com/uc?export=view&id=1k3CXRiVDCBD5k2ZqWwdN2synNVtEprfv" alt="App Screenshot 8" width="200" height="400">
 
-## About Screen
+## Sajda List Screen
 <img src="https://drive.google.com/uc?export=view&id=1gO6gK9iFuOgS4cA-1Bud5pBqpsyqOuV2" alt="App Screenshot 9" width="200" height="400">
 
 ## 📂 Table of Contents
@@ -60,18 +60,20 @@ Before you begin, ensure you have met the following requirements:
 
 - ✅ **Flutter SDK**: Install the latest version of the [Flutter SDK](https://flutter.dev/docs/get-started/install).
 - ✅ **Dart SDK**: Ensure Dart SDK is installed alongside Flutter.
-- ✅ **API Key**: Some functionalities require an API key from a COVID-19 data provider (e.g., [disease.sh](https://disease.sh)).
+- ✅ **API Key**: Some functionalities require an API key from a Quran.ia data provider).
 
 ---
 
-## 🎨 Features
-
-- **Global Overview**: Displays global statistics including total cases, recoveries, and deaths.
-- **Country-Wise Data**: Select any country to view specific stats and graphs for that region.
-- **Graphs and Charts**: Visualize the rise or decline in cases with real-time graph updates.
-- **Daily Updates**: The app provides daily updated statistics pulled directly from the API.
-- **COVID-19 News**: Fetches the latest news related to the pandemic from reliable sources.
-- **Interactive Map**: An interactive map with markers for each country, showing cases per location (optional).
+##📖 Features
+-##Surah List Overview: Displays a complete list of Surahs, including their names, number of verses, and order in the Qur'an.
+-##Surah Details: View detailed information for each Surah, including verse-by-verse translation, transliteration, and Tafsir (interpretation).
+-##Language Selection: Choose from multiple languages for translation, Tafsir, and user interface.
+-##Audio Recitation: Listen to the recitation of each Surah by renowned Qaris, with the ability to play, pause, or seek through verses.
+-##Sajda Indicators: Highlights the verses of Sajda (prostration), ensuring proper recitation and guidance for the reader.
+-##Qari List: Browse and select from a list of famous Qaris (reciters) to personalize the audio experience.
+-##Daily Verse: Receive a daily verse notification with translation and Tafsir to inspire reflection.
+-##Bookmarks and Favorites: Save specific verses or Surahs for easy access later.
+-##Offline Access: Download Surahs and translations to read and listen offline without needing an internet connection.
 
 ---
 
@@ -81,10 +83,10 @@ Follow these steps to install and set up the project:
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-username/covid-19-tracker-app.git
+git clone https://github.com/your-username/al_quran_application_flutter.git
 
 # Go to the project directory
-cd covid-19-tracker-app
+cd al_quran_application_flutter
 
 # Install dependencies
 flutter pub get
