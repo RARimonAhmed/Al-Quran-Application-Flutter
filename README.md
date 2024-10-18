@@ -2,15 +2,16 @@
 
 ![Project Logo](https://drive.google.com/uc?export=view&id=1R9R8R-gqpMfRvdSJ3d6iXmBtcQwqtexw)
 
-## 📖 Overview
-COVID-19 Tracker App provides real-time statistics and insights about COVID-19 cases, recoveries, and deaths across various countries and regions. The app utilizes public APIs to fetch the latest data and display it in a user-friendly interface with graphical representations and key information.
+📖 Overview
+The Al-Quran Application provides a comprehensive and interactive experience for reading, listening, and understanding the Quran. The app is designed to offer users access to the Quran's text, translations, recitations by famous Qaris, and Tafsir (interpretation) in various languages. With a user-friendly interface, the app enables you to explore the Quran's rich content with features tailored for both casual readers and students of the Quran.
 
-### Key Features:
-- 🔥 Real-time COVID-19 Statistics: Get up-to-date numbers for confirmed cases, recoveries, and deaths.
-- 🌎 Global and Country-Specific Data: View data for the entire world or drill down into specific countries.
-- 📊 Visual Representations: Graphs and charts for better understanding of the trends.
-- 📰 Latest News and Updates: Stay informed with news about the pandemic.
-
+Key Features:
+📖 Surah List & Details: Easily browse through the entire Quran with a detailed list of all 114 Surahs, including information such as the number of verses and place of revelation. Dive into each Surah with verse-by-verse details, translations, and Tafsir.
+🌐 Language Selection: Choose from multiple languages for Quranic translation and Tafsir to suit your reading preferences. The app provides accurate and authentic translations for a better understanding.
+🎧 Audio Recitations: Listen to the Quran recited by renowned Qaris. You can play, pause, and navigate through verses with an audio player designed for an immersive recitation experience.
+📊 Sajda Indicators: Clear indicators for verses that require Sajda (prostration), ensuring users follow proper recitation and observance of Islamic practices.
+🎙️ Qari Selection: Browse and select from a variety of famous Qaris to customize your listening experience.
+🔖 Bookmarks & Favorites: Mark specific verses or Surahs for quick reference and future reading.
 
 ### App Screenshots:
 
