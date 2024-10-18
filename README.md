@@ -1,6 +1,6 @@
 ### Al Quran
-
-![Project Logo](https://drive.google.com/uc?export=view&id=1R9R8R-gqpMfRvdSJ3d6iXmBtcQwqtexw)
+## Project Logo
+<img src="https://drive.google.com/uc?export=view&id=1R9R8R-gqpMfRvdSJ3d6iXmBtcQwqtexw" alt="Project Logo" style="background-color: white; padding: 10px;" width="500" height="500">
 
 ## 📖 Overview
 COVID-19 Tracker App provides real-time statistics and insights about COVID-19 cases, recoveries, and deaths across various countries and regions. The app utilizes public APIs to fetch the latest data and display it in a user-friendly interface with graphical representations and key information.
