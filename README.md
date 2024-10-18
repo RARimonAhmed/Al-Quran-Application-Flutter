@@ -15,31 +15,31 @@ COVID-19 Tracker App provides real-time statistics and insights about COVID-19 c
 ### App Screenshots:
 
 ## Splash Screen
-<img src="https://drive.google.com/uc?export=view&id=1CI6HIH3RjVtF4-A-Tns5KbHGrwx2cKHq" alt="App Screenshot 1" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1CI6HIH3RjVtF4-A-Tns5KbHGrwx2cKHq" alt="App Screenshot 1" width="200" height="400">
 
 ## Home Page
-<img src="https://drive.google.com/uc?export=view&id=1Jf5rfjPCHv2JagRUVTHUalftK1BuhXIw" alt="App Screenshot 2" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1Jf5rfjPCHv2JagRUVTHUalftK1BuhXIw" alt="App Screenshot 2" width="200" height="400">
 
 ## Search Screen
-<img src="https://drive.google.com/uc?export=view&id=1xH_vtUBm32mHAVaSoMtXrgg4IPnPj_X3" alt="App Screenshot 3" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1xH_vtUBm32mHAVaSoMtXrgg4IPnPj_X3" alt="App Screenshot 3" width="200" height="400">
 
 ## Country List Screen
-<img src="https://drive.google.com/uc?export=view&id=1YEzRD_FnZo-xO5sY_JaY7zVxjoHXcblG" alt="App Screenshot 4" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1YEzRD_FnZo-xO5sY_JaY7zVxjoHXcblG" alt="App Screenshot 4" width="200" height="400">
 
 ## Countries People Affected Details Screen
-<img src="https://drive.google.com/uc?export=view&id=1mk-kr63tmeTiql-rb3CYbujxDG2_LZ7a" alt="App Screenshot 5" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1mk-kr63tmeTiql-rb3CYbujxDG2_LZ7a" alt="App Screenshot 5" width="200" height="400">
 
 ## Shimmer Loading Screen
-<img src="https://drive.google.com/uc?export=view&id=1M_XcuYgBkHwJw1Herbb2sRI7zDXQ-PsR" alt="App Screenshot 6" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1M_XcuYgBkHwJw1Herbb2sRI7zDXQ-PsR" alt="App Screenshot 6" width="200" height="400">
 
 ## Graph Representation Screen
-<img src="https://drive.google.com/uc?export=view&id=19d7HF2osNnGmXu8vOyZVXWzt-bN5nh1R" alt="App Screenshot 7" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=19d7HF2osNnGmXu8vOyZVXWzt-bN5nh1R" alt="App Screenshot 7" width="200" height="400">
 
 ## COVID-19 News Screen
-<img src="https://drive.google.com/uc?export=view&id=1k3CXRiVDCBD5k2ZqWwdN2synNVtEprfv" alt="App Screenshot 8" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1k3CXRiVDCBD5k2ZqWwdN2synNVtEprfv" alt="App Screenshot 8" width="200" height="400">
 
 ## About Screen
-<img src="https://drive.google.com/uc?export=view&id=1gO6gK9iFuOgS4cA-1Bud5pBqpsyqOuV2" alt="App Screenshot 9" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1gO6gK9iFuOgS4cA-1Bud5pBqpsyqOuV2" alt="App Screenshot 9" width="200" height="400">
 
 ## 📂 Table of Contents
 
