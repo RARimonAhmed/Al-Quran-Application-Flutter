@@ -1,6 +1,6 @@
 ### Al Quran
-## Project Logo
-<img src="https://drive.google.com/uc?export=view&id=1R9R8R-gqpMfRvdSJ3d6iXmBtcQwqtexw" alt="Project Logo" style="background-color: white; padding: 10px;" width="500" height="500">
+
+![Project Logo](https://drive.google.com/uc?export=view&id=1R9R8R-gqpMfRvdSJ3d6iXmBtcQwqtexw)
 
 ## 📖 Overview
 COVID-19 Tracker App provides real-time statistics and insights about COVID-19 cases, recoveries, and deaths across various countries and regions. The app utilizes public APIs to fetch the latest data and display it in a user-friendly interface with graphical representations and key information.
@@ -15,22 +15,31 @@ COVID-19 Tracker App provides real-time statistics and insights about COVID-19 c
 ### App Screenshots:
 
 ## Splash Screen
-<img src="https://drive.google.com/uc?export=view&id=1NnoDk55JFVrcJAJAF06P3TzsirnV5hW7" alt="App Screenshot 1" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1CI6HIH3RjVtF4-A-Tns5KbHGrwx2cKHq" alt="App Screenshot 1" width="500" height="700">
 
 ## Home Page
-<img src="https://drive.google.com/uc?export=view&id=1DyVjvsCmY2VyagGqAO6p9aAEAtdlVjy_" alt="App Screenshot 2" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1Jf5rfjPCHv2JagRUVTHUalftK1BuhXIw" alt="App Screenshot 2" width="500" height="700">
 
 ## Search Screen
-<img src="https://drive.google.com/uc?export=view&id=1mHvgltraXGfKELZnxLFfr0TC8Sdr2kZl" alt="App Screenshot 3" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1xH_vtUBm32mHAVaSoMtXrgg4IPnPj_X3" alt="App Screenshot 3" width="500" height="700">
 
 ## Country List Screen
-<img src="https://drive.google.com/uc?export=view&id=1TwUdFUnqC-T3NaKkTDIZAGgr4nQHpSe4" alt="App Screenshot 4" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1YEzRD_FnZo-xO5sY_JaY7zVxjoHXcblG" alt="App Screenshot 4" width="500" height="700">
 
 ## Countries People Affected Details Screen
-<img src="https://drive.google.com/uc?export=view&id=1m_DsDBDdnLl9bIZg5yEiqPKl63MJjwmC" alt="App Screenshot 5" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1mk-kr63tmeTiql-rb3CYbujxDG2_LZ7a" alt="App Screenshot 5" width="500" height="700">
 
 ## Shimmer Loading Screen
-<img src="https://drive.google.com/uc?export=view&id=1_qn8g2g0Qg6jMTW9h_uGkKPWlk8j-RIa" alt="App Screenshot 6" width="500" height="700">
+<img src="https://drive.google.com/uc?export=view&id=1M_XcuYgBkHwJw1Herbb2sRI7zDXQ-PsR" alt="App Screenshot 6" width="500" height="700">
+
+## Graph Representation Screen
+<img src="https://drive.google.com/uc?export=view&id=19d7HF2osNnGmXu8vOyZVXWzt-bN5nh1R" alt="App Screenshot 7" width="500" height="700">
+
+## COVID-19 News Screen
+<img src="https://drive.google.com/uc?export=view&id=1k3CXRiVDCBD5k2ZqWwdN2synNVtEprfv" alt="App Screenshot 8" width="500" height="700">
+
+## About Screen
+<img src="https://drive.google.com/uc?export=view&id=1gO6gK9iFuOgS4cA-1Bud5pBqpsyqOuV2" alt="App Screenshot 9" width="500" height="700">
 
 ## 📂 Table of Contents
 
